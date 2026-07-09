@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "promptdict"
-version = "0.2.0"
-description = "Lossless prompt compression via dictionary-encoding + hierarchical PageIndex-style scaling toward 100M→1M token budgets"
+version = "0.3.0"
+description = "Lossless dictionary-encoding prompt compression, working-set compaction, and cold_store recall for LLM context budgets"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }

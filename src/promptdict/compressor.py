@@ -41,7 +41,7 @@ class CompressResult:
             "packed_prompt": self.packed_prompt,
             "metrics": self.metrics.to_dict(),
             "meta_style": self.meta_style,
-            "version": "0.2.0",
+            "version": "0.3.0",
         }
 
     def to_json(self, *, indent: int = 2) -> str:

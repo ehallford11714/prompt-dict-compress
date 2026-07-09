@@ -40,7 +40,7 @@ class HierarchicalResult:
 
     def to_dict(self) -> dict[str, Any]:
         return {
-            "version": "0.2.0",
+            "version": "0.3.0",
             "kind": "hierarchical_pageindex",
             "global_dictionary": self.global_dictionary,
             "page_index": self.page_index,
@@ -59,8 +59,8 @@ class HierarchicalPageIndexCompress:
     Split into pages → per-page local dictionaries → cross-page global dictionary
     of repeated page fingerprints / shared chunks → nested encode.
 
-    This is the in-memory v1 path. For 100M-scale streaming, see
-    ``promptdict.scale.MillionTokenBudgetCompressor``.
+    This is the in-memory v1 path. For ultra-long streaming + cold_store, see
+    ``promptdict.scale.BudgetedContextCompressor``.
     """
 
     def __init__(

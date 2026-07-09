@@ -1,9 +1,9 @@
-# SOTA Research Brief: 100M → 1M Token Context (Lossless / Near-Lossless)
+# SOTA Research Brief: Ultra-Long Context into a Fixed Budget (Lossless / Near-Lossless)
 
 **Project:** PromptDictCompress  
 **Date:** 2026-07-09  
-**Scope:** Can ~100M raw tokens be reduced to a ~1M-token *API-portable* prompt **losslessly** (or near-lossless with explicit caveats)?  
-**Labeling:** **Published** = peer-reviewed / arXiv with measurable claims. **Engineering** = production practice / OSS. **Speculation** = information-theoretic or design inference not claimed by a paper for 100×.
+**Scope:** Can an *ultra-long* input corpus (`input_budget` tokens) be reduced to a fixed *API-portable* prompt (`output_budget`) **losslessly** (or near-lossless with explicit caveats)?  
+**Labeling:** **Published** = peer-reviewed / arXiv with measurable claims. **Engineering** = production practice / OSS. **Speculation** = information-theoretic or design inference not claimed by a paper for extreme ratios.
 
 ---
 
@@ -11,13 +11,13 @@
 
 | Claim | Status |
 | --- | --- |
-| Strictly lossless **100M → 1M entirely inside** a 1M API context for *arbitrary* text | **Not plausible** (entropy / Kolmogorov bounds) |
-| Strictly lossless **100M → 1M prompt-resident** for *highly repetitive* corpora (logs, templates, JSON) | **Possible in principle**, **unproven at 100×** in published work; published dict+ICL reports ~**2–5×** (60–80% *reduction*), not 100× |
-| Lossless **corpus** management with **prompt_pack (≤1M) + cold_store (disk)** | **SOTA-practical** and matches agent memory / filesystem-as-RAM patterns |
+| Strictly lossless packing of an *arbitrary* ultra-long corpus **entirely inside** a fixed `output_budget` API context | **Not plausible** (entropy / Kolmogorov bounds) |
+| Strictly lossless **prompt-resident** packing for *highly repetitive* corpora (logs, templates, JSON) under a fixed `output_budget` | **Possible in principle**, **unproven at extreme ratios** in published work; published dict+ICL reports ~**2–5×** (60–80% *reduction*), not 100× |
+| Lossless **corpus** management with **prompt_pack (≤ `output_budget`) + cold_store (disk)** | **SOTA-practical** and matches agent memory / filesystem-as-RAM patterns |
 | Lossy extractive / summarization at 10–20× | **Published** (LLMLingua family, Selective Context); **not** lossless |
 | KV-cache / Infini-attention “compression” | **System / architecture**; not API-portable prompt compression |
 
-**Recommended design for this project:** hierarchical PageIndex + nested dictionary encoding + two-tier `prompt_pack` / `cold_store` (see [SCALE_100M_TO_1M.md](./SCALE_100M_TO_1M.md)).
+**Recommended design for this project:** hierarchical PageIndex + nested dictionary encoding + two-tier `prompt_pack` / `cold_store` (see [SCALE_ULTRA_LONG.md](./SCALE_ULTRA_LONG.md)).
 
 ---
 
@@ -39,8 +39,8 @@ https://arxiv.org/abs/2604.13066 · https://arxiv.org/html/2604.13066v1
 
 **Caveats (honest):**
 
-- This is **not** a published 100× result. 80% *reduction* ≠ 100× *compression factor*.
-- Fidelity is measured largely via **round-trip / similarity**, not full suite of downstream analytics at 100M scale.
+- This is **not** a published extreme-ratio result. 80% *reduction* ≠ 100× *compression factor* (and published work is ~2–5×).
+- Fidelity is measured largely via **round-trip / similarity**, not full suite of downstream analytics at ultra-long scale.
 - Works best on **repetitive** data (logs); high-entropy prose will not compress similarly.
 - Nested / multi-scale patterns are algorithmic; paper notes avoiding nested meta-tokens in some mining steps.
 
@@ -58,7 +58,7 @@ Lossless **prompt storage** via zstd / BPE packing (~4–5× mean on their set).
 | Mine multi-scale patterns + token-savings gate | `src/promptdict/compressor.py` (`DictCompressor`) |
 | Dictionary in system / packed prompt | `pack_prompt()` |
 | Hierarchical / multi-page | `hierarchical.py`, `scale.py` |
-| 100M streaming + cold store | `MillionTokenBudgetCompressor` in `scale.py` |
+| ultra-long streaming + cold store | `BudgetedContextCompressor` in `scale.py` |
 
 ---
 
@@ -73,11 +73,11 @@ Lossless **prompt storage** via zstd / BPE packing (~4–5× mean on their set).
 | **LLMLingua-2** | (Microsoft series) | https://github.com/microsoft/LLMLingua/ | Faster task-agnostic classifier compression |
 | **Selective Context** | EMNLP 2023 · arXiv:2310.06201 | https://arxiv.org/abs/2310.06201 | Self-information pruning; ~**2×** context cost cut in paper |
 
-**Why not 100× lossless:**
+**Why not extreme-ratio lossless:**
 
 - These methods **delete** tokens judged low-information. Deleted content is gone → **lossy by definition**.
 - High ratios (10–20×) trade accuracy; characterization work finds extractive methods often beat aggressive token pruning, but still lossy ([Characterizing Prompt Compression…](https://arxiv.org/pdf/2407.08892), arXiv:2407.08892).
-- Even at 20×, 100M → 5M, **not** 1M; and remaining text is not a lossless encoding of the original.
+- Even at 20×, an ultra-long `input_budget` still may not fit a fixed `output_budget`; and remaining text is not a lossless encoding of the original.
 
 **Role vs PromptDictCompress:** complementary for *query-focused* views over cold_store; never substitute for lossless corpus fidelity.
 
@@ -115,12 +115,12 @@ https://github.com/VectifyAI/PageIndex · https://pageindex.ai/blog/pageindex-in
 
 - Build structured tree (sections / pages); optional node summaries.
 - Retrieve by **reasoning over the index**, not embedding similarity alone.
-- Scale story: file-level trees over corpora (“PageIndex File System”); related: ChatIndex, ConDB (KV-cache-native context DB) — ecosystem claims, treat product blogs as **engineering**, not peer-reviewed 100M→1M proofs.
+- Scale story: file-level trees over corpora (“PageIndex File System”); related: ChatIndex, ConDB (KV-cache-native context DB) — ecosystem claims, treat product blogs as **engineering**, not peer-reviewed ultra-long→fixed-budget proofs.
 
-**Why it matters for 100M→1M:**
+**Why it matters for ultra-long → fixed budget:**
 
-- You do **not** need all 100M tokens in the active window.
-- Hot path: **directory + dictionaries + selected pages** ≤ 1M.
+- You do **not** need the entire ultra-long corpus in the active window.
+- Hot path: **directory + dictionaries + selected pages** ≤ `output_budget`.
 - Cold path: full pages on disk / object store, fetched by page_id (tool or agent).
 - Nested dictionaries amplify gains when many pages share templates.
 
@@ -172,11 +172,11 @@ https://github.com/VectifyAI/PageIndex · https://pageindex.ai/blog/pageindex-in
 
 Infini-attention reports large **memory-footprint** compression vs storing full KV (paper cites **>100×** vs Memorizing Transformers’ memory size in their comparison table) and long-context experiments (e.g. 1M-scale passkey with 1B model in paper claims). Independent reproduction notes reliability limits (HF blog: https://huggingface.co/blog/infini-attention).
 
-**Relevance:** requires **model/architecture change** or continual pretrain. Does not give API users a way to stuff 100M tokens into a 1M chat request.
+**Relevance:** requires **model/architecture change** or continual pretrain. Does not give API users a way to stuff ultra-long input tokens into a 1M chat request.
 
 ---
 
-## 8. 100× and million-to-billion context management
+## 8. Extreme ratios and ultra-long context management
 
 ### Published / commentary
 
@@ -184,34 +184,34 @@ Infini-attention reports large **memory-footprint** compression vs storing full 
   https://cacm.acm.org/news/the-road-to-a-billion-token-context/
 - 2026 context-management surveys emphasize caching, hierarchical memory, and compression over raw window growth  
   https://zylos.ai/research/2026-01-19-llm-context-management/
-- Infini-attention’s “100×” is **KV memory size**, not “100M prompt tokens → 1M API tokens lossless.”
-- Dict+ICL (2604.13066): **~5×** class, not 100×.
+- Infini-attention’s “100×” is **KV memory size**, not “ultra-long prompt tokens → fixed `output_budget` API tokens lossless.”
+- Dict+ICL (2604.13066): **~2–5×** class, not extreme (e.g. 100×) prompt packing.
 - LLMLingua: up to **~20× lossy**.
 
-**No verified paper found (as of this brief) that demonstrates strictly lossless, API-portable 100× compression of arbitrary 100M-token corpora into a 1M context.** Claims of 100× should be labeled **speculative** unless restricted to extreme redundancy + two-tier storage semantics.
+**No verified paper found (as of this brief) that demonstrates strictly lossless, API-portable extreme-ratio compression of arbitrary ultra-long corpora into a fixed `output_budget` context.** Claims of 100× should be labeled **speculative** unless restricted to extreme redundancy + two-tier storage semantics.
 
 ---
 
 ## Analysis questions
 
-### A. Is strictly lossless + entirely inside a 1M API context from 100M raw tokens information-theoretically plausible?
+### A. Is strictly lossless + entirely inside a fixed `output_budget` API context from ultra-long raw tokens information-theoretically plausible?
 
 **For arbitrary / high-entropy text: No.**
 
-- A lossless compressor cannot map all 100M-token strings into a 1M-token code while remaining invertible: there are far more source messages than codewords (pigeonhole / Shannon).
+- A lossless compressor cannot map all ultra-long-token strings into a fixed `output_budget`-token code while remaining invertible: there are far more source messages than codewords (pigeonhole / Shannon).
 - Typical English / code token streams have **non-trivial entropy rate**. Even strong byte compressors rarely achieve **100×** on mixed natural language; when they do, the source was already highly redundant.
-- **Conditional yes:** if the corpus is generated from a **small template set** + sparse parameters (classic log lines), Kolmogorov complexity can be ≪ 1M tokens. Then a dictionary + encoded body *can* fit. That is a **property of the data**, not a universal algorithm.
+- **Conditional yes:** if the corpus is generated from a **small template set** + sparse parameters (classic log lines), Kolmogorov complexity can be ≪ `output_budget` tokens. Then a dictionary + encoded body *can* fit. That is a **property of the data**, not a universal algorithm.
 
 **Near-lossless caveat:** approximate reconstructions, summaries, or eviction can “fit” but violate invertibility.
 
-### B. When is `prompt_pack (≤1M) + cold_store (lossless on disk)` the correct SOTA-practical design?
+### B. When is `prompt_pack (≤ output_budget) + cold_store (lossless on disk)` the correct SOTA-practical design?
 
 **When any of these hold:**
 
 1. You need **bit-exact / string-exact** recovery of the full corpus.
 2. The active task only needs a **working set** (index + hot pages + tools to fetch cold pages).
 3. You use **API LLMs** (no custom KV / Infini stack).
-4. Redundancy is high enough that dictionaries + templates shrink the *addressable* view, but not enough for full 100× prompt-resident packing.
+4. Redundancy is high enough that dictionaries + templates shrink the *addressable* view, but not enough for full extreme-ratio prompt-resident packing.
 
 This matches Anthropic-style **filesystem-as-memory** and PageIndex **navigate-then-read**.
 
@@ -225,15 +225,15 @@ This matches Anthropic-style **filesystem-as-memory** and PageIndex **navigate-t
 
 ### D. Recommended architecture (user goal)
 
-See [SCALE_100M_TO_1M.md](./SCALE_100M_TO_1M.md). Short form:
+See [SCALE_ULTRA_LONG.md](./SCALE_ULTRA_LONG.md). Short form:
 
 ```
-100M corpus
+ultra-long corpus
   → stream pages
   → Level-0 local dict-encode (lossless)
   → Level-1 global/template codebook
   → Level-2 PageIndex directory
-  → prompt_pack ≤ 1M (dicts + index + hot pages)
+  → prompt_pack ≤ output_budget (dicts + index + hot pages)
   → cold_store.jsonl (all encoded pages; lossless decode)
   → agent/tools fetch cold pages as needed
 ```
@@ -242,10 +242,10 @@ See [SCALE_100M_TO_1M.md](./SCALE_100M_TO_1M.md). Short form:
 
 ## Ranked methods for *this* use case (API-portable, prefer lossless)
 
-| Rank | Method | Lossless? | Portable? | Typical factor | Fit for 100M→1M |
+| Rank | Method | Lossless? | Portable? | Typical factor | Fit for ultra-long → fixed budget |
 | ---: | --- | --- | --- | --- | --- |
-| 1 | **PageIndex hierarchy + nested dict-encode + cold_store** | Yes (with cold) | Yes | Data-dependent; 100× only if redundancy extreme **or** two-tier accounting | **Best** |
-| 2 | **Dict-encode + ICL alone** (flat) | Yes (round-trip) | Yes | ~2–5× published | Good for logs ≪100M |
+| 1 | **PageIndex hierarchy + nested dict-encode + cold_store** | Yes (with cold) | Yes | Data-dependent; extreme ratios only if redundancy extreme **or** two-tier accounting | **Best** |
+| 2 | **Dict-encode + ICL alone** (flat) | Yes (round-trip) | Yes | ~2–5× published | Good for logs ≪ultra-long |
 | 3 | **Classic zstd on disk + tool decompress** | Yes | Yes (via tools) | Often high on logs | Storage tier, not prompt |
 | 4 | **Extractive RAG / LongLLMLingua** | No | Yes | ~4–20× | Query views over cold_store |
 | 5 | **Agent compaction / summarization** | No | Yes | Aggressive | Session memory only |
@@ -256,9 +256,9 @@ See [SCALE_100M_TO_1M.md](./SCALE_100M_TO_1M.md). Short form:
 
 ## What we are *not* claiming
 
-- We do **not** claim a peer-reviewed demonstration of lossless 100× packing of general 100M-token text into a 1M API context.
+- We do **not** claim a peer-reviewed demonstration of lossless extreme-ratio packing of general ultra-long text into a fixed `output_budget` API context.
 - We do **not** treat Infini-attention’s 100× memory figure as prompt compression.
-- Scale demos in this repo that use `simulated_input_tokens` are **labeled simulations** of redundancy structure, not literal 100M-token materialization (see `scale.py`).
+- Scale demos in this repo that use `simulated_input_tokens` are **labeled simulations** of redundancy structure, not literal ultra-long-token materialization (see `scale.py`).
 
 ---
 

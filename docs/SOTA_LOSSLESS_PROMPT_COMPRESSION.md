@@ -49,11 +49,11 @@ PageIndex builds an **in-context hierarchical index** (JSON tree / ToC) so an LL
 | **L1** | Cross-page / template codebook (shared chunks → meta-tokens) |
 | **L2** | PageIndex directory: `page_id → fingerprint / template_id / dict refs` |
 
-**Path to ~1M tokens in the prompt:** keep global + nested dictionaries + slim index + **hot** encoded pages in the prompt; **cold_store** on disk holds all pages for full lossless decode. See [SCALE_100M_TO_1M.md](SCALE_100M_TO_1M.md) for the 100M→1M budget design.
+**Path to ~1M tokens in the prompt:** keep global + nested dictionaries + slim index + **hot** encoded pages in the prompt; **cold_store** on disk holds all pages for full lossless decode. See [SCALE_ULTRA_LONG.md](SCALE_ULTRA_LONG.md) for the ultra-long → fixed-budget design.
 
 Recursive meta-tokens: longer patterns compressed first; shorter patterns may appear inside expansions only after decode (encode avoids nesting meta inside patterns during selection).
 
-**Dictionary paging / LRU (design + stubs):** for corpora beyond RAM, stream pages, retain an LRU of hot local dicts in the prompt pack, and page cold dicts from disk — implemented as streaming cold_store + hot_page_fraction in `MillionTokenBudgetCompressor`.
+**Dictionary paging / LRU (design + stubs):** for corpora beyond RAM, stream pages, retain an LRU of hot local dicts in the prompt pack, and page cold dicts from disk — implemented as streaming cold_store + hot_page_fraction in `BudgetedContextCompressor`.
 
 ## Citations / links
 

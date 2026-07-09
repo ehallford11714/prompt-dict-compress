@@ -1,11 +1,12 @@
-"""Streaming hierarchical compression targeting ~100M → ~1M token budgets.
+"""Streaming hierarchical compression into a fixed context budget.
 
 Honest design:
 - Full lossless reconstruction of the *corpus* uses prompt_pack + cold_store on disk.
-- A 1M-token *prompt-resident* pack holds: global/nested dictionaries, PageIndex
+- The prompt-resident pack holds: global/nested dictionaries, PageIndex
   directory, and a budgeted set of hot encoded pages (or page refs).
-- 100× prompt-resident compression is only plausible for highly repetitive
-  logs/JSON/code with shared templates; high-entropy prose cannot hit 100×.
+- Extreme prompt-resident ratios are only plausible for highly repetitive
+  logs/JSON/code with shared templates; published dict+ICL is typically ~2–5×.
+  High-entropy prose will not match those gains.
 """
 
 from __future__ import annotations
@@ -68,8 +69,9 @@ class ScaleCompressResult:
                 "lossless_scope": "prompt_pack + cold_store",
                 "prompt_pack_alone": "addressable compressed view; may omit cold page bodies",
                 "note": (
-                    "100× prompt-resident is only expected for highly repetitive data; "
-                    "otherwise use two-tier (prompt + cold_store) for lossless decode."
+                    "Published dict+ICL is typically ~2–5×; extreme prompt-resident "
+                    "ratios need highly repetitive data. Use two-tier "
+                    "(prompt_pack + cold_store) for full lossless decode."
                 ),
             },
         }
@@ -100,7 +102,7 @@ class StreamingHierarchicalCompressor:
     def __init__(
         self,
         *,
-        input_token_budget: int = 100_000_000,
+        input_token_budget: int = 10_000_000,
         output_token_budget: int = 1_000_000,
         page_chars: int = 16_000,  # ~4k tokens at chars/4
         max_global_dict: int = 512,
@@ -246,7 +248,7 @@ class StreamingHierarchicalCompressor:
 
         # PageIndex directory (Level-2)
         page_index = {
-            "version": "0.2.0",
+            "version": "0.3.0",
             "kind": "streaming_pageindex",
             "n_pages": len(page_rows),
             "n_templates": len(template_counts),
@@ -311,37 +313,13 @@ class StreamingHierarchicalCompressor:
             for r in page_rows
         ]
 
-        packed = "\n".join(
-            [
-                "MILLION-TOKEN-BUDGET PAGEINDEX PACK",
-                f"input_tokens_est={reported_input} output_budget={self.output_token_budget}",
-                "Lossless full decode requires cold_store.jsonl + this pack.",
-                "Prompt holds dictionaries, directory, and HOT pages only.",
-                "",
-                "GLOBAL_DICT:",
-                *gdict_lines,
-                "",
-                "TEMPLATE_CODEBOOK:",
-                *tmeta_lines,
-                "",
-                "PAGE_INDEX:",
-                json.dumps(slim_index, ensure_ascii=False),
-                "",
-                "HOT_ENCODED_PAGES:",
-                *hot_bodies,
-                "",
-                "COLD_STORE_REF: cold_store.jsonl",
-            ]
-        )
-
-        # If packed exceeds budget, drop hot pages until under budget (keep dicts+index)
-        prompt_tok = estimate_tokens(packed)
-        while prompt_tok > self.output_token_budget and hot_bodies:
-            hot_bodies.pop()
-            packed = "\n".join(
+        def _build_pack(bodies: list[str]) -> str:
+            return "\n".join(
                 [
-                    "MILLION-TOKEN-BUDGET PAGEINDEX PACK",
-                    f"input_tokens_est={reported_input} output_budget={self.output_token_budget}",
+                    "BUDGETED PAGEINDEX PACK",
+                    f"input_tokens_est={reported_input} "
+                    f"input_budget={self.input_token_budget} "
+                    f"output_budget={self.output_token_budget}",
                     "Lossless full decode requires cold_store.jsonl + this pack.",
                     "Prompt holds dictionaries, directory, and HOT pages only.",
                     "",
@@ -355,11 +333,19 @@ class StreamingHierarchicalCompressor:
                     json.dumps(slim_index, ensure_ascii=False),
                     "",
                     "HOT_ENCODED_PAGES:",
-                    *hot_bodies,
+                    *bodies,
                     "",
                     "COLD_STORE_REF: cold_store.jsonl",
                 ]
             )
+
+        packed = _build_pack(hot_bodies)
+
+        # If packed exceeds budget, drop hot pages until under budget (keep dicts+index)
+        prompt_tok = estimate_tokens(packed)
+        while prompt_tok > self.output_token_budget and hot_bodies:
+            hot_bodies.pop()
+            packed = _build_pack(hot_bodies)
             prompt_tok = estimate_tokens(packed)
 
         prompt_path.write_text(packed, encoding="utf-8")
@@ -390,7 +376,7 @@ class StreamingHierarchicalCompressor:
                     reported_input / self.output_token_budget if self.output_token_budget else 0
                 ),
                 "achieved_factor_prompt_only": factor,
-                "prompt_resident_100x": factor >= 100.0,
+                "extreme_prompt_resident_ratio": factor >= 50.0,
                 "lossless_requires_cold_store": True,
             },
             prompt_pack_path=str(prompt_path.resolve()),
@@ -424,12 +410,14 @@ class StreamingHierarchicalCompressor:
         return "".join(t for _, t in pages)
 
 
-# Alias per user request
+# Preferred name: budgeted ultra-long context path
+BudgetedContextCompressor = StreamingHierarchicalCompressor
+# Back-compat alias
 MillionTokenBudgetCompressor = StreamingHierarchicalCompressor
 
 
 # ---------------------------------------------------------------------------
-# Synthetic scale generator (emulates 100M-token redundancy without huge RAM)
+# Synthetic scale generator (emulates ultra-long redundancy without huge RAM)
 # ---------------------------------------------------------------------------
 
 DEFAULT_TEMPLATES = [
@@ -475,17 +463,17 @@ def estimate_generator_tokens(n_pages: int, page_lines: int = 40, n_templates: i
 
 def run_scale_demo(
     *,
-    target_in: int = 100_000_000,
+    target_in: int = 10_000_000,
     target_out: int = 1_000_000,
     simulate: bool = True,
     out_dir: PathLike = ".scale_demo",
     max_materialized_pages: int = 400,
 ) -> ScaleCompressResult:
     """
-    Demonstrate algorithmic path toward 100M→1M.
+    Demonstrate packing an ultra-long (simulated) corpus into ``target_out``.
 
     In --simulate mode we materialize a modest number of highly repetitive pages
-    that stand in for the redundancy structure of a 100M-token corpus, then
+    that stand in for the redundancy structure of a large corpus, then
     report metrics against the *target* input size (honest labeling in metrics).
     """
     out = Path(out_dir)
@@ -493,10 +481,10 @@ def run_scale_demo(
         # Choose page count for a manageable demo disk footprint
         n_pages = min(max_materialized_pages, 400)
         pages = generate_repetitive_pages(n_pages=n_pages, page_lines=50, n_templates=24)
-        # Project: if each page ~tok, how many pages would 100M need?
+        # Project: if each page ~tok, how many pages would target_in need?
         sample_tok = estimate_generator_tokens(5, page_lines=50, n_templates=24) / 5
         projected_pages = int(target_in / max(1, sample_tok))
-        comp = MillionTokenBudgetCompressor(
+        comp = BudgetedContextCompressor(
             input_token_budget=target_in,
             output_token_budget=target_out,
             page_chars=50_000,
@@ -510,13 +498,14 @@ def run_scale_demo(
         result.metrics["avg_tokens_per_page_est"] = sample_tok
         result.metrics["honesty"] = (
             "Input token count is the TARGET (simulated). Disk holds a redundancy-equivalent "
-            "sample, not 100M tokens. Compression factor uses target_in / prompt_tokens."
+            "sample, not a full materialization of target_in tokens. "
+            "Compression factor uses target_in / prompt_tokens."
         )
         # Re-write meta with updated metrics
         (out / "scale_meta.json").write_text(json.dumps(result.to_dict(), indent=2), encoding="utf-8")
         return result
 
-    # Non-simulate: write a large-ish file capped (~200MB chars) then compress
+    # Non-simulate: write a large-ish file capped then compress
     n_pages = min(max_materialized_pages, 2000)
     path = out / "synthetic_corpus.txt"
     out.mkdir(parents=True, exist_ok=True)
@@ -524,7 +513,7 @@ def run_scale_demo(
         for _, page in generate_repetitive_pages(n_pages=n_pages, page_lines=80, n_templates=24):
             f.write(page)
             f.write("\n")
-    comp = MillionTokenBudgetCompressor(
+    comp = BudgetedContextCompressor(
         input_token_budget=target_in,
         output_token_budget=target_out,
     )
