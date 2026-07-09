@@ -1,0 +1,3718 @@
+{
+  "created_at": "2026-07-09T22:20:42.883482+00:00",
+  "budget": 1800,
+  "isolates_backend": "intentisolates",
+  "promptdict_src": "C:\\Users\\ehall\\OneDrive\\Desktop\\research\\PromptDictCompress\\src",
+  "n_fixtures": 5,
+  "conditions": [
+    "raw",
+    "compress",
+    "compact",
+    "lossy_truncate",
+    "protect_compact"
+  ],
+  "summary_table": [
+    {
+      "condition": "raw",
+      "n": 5,
+      "avg_tokens_before": 1801.4,
+      "avg_tokens_after": 1801.4,
+      "avg_token_ratio": 1.0,
+      "lossless_exact_rate": 1.0,
+      "avg_gold_phrase_recall_visible": 1.0,
+      "avg_gold_phrase_recall_restored": 1.0,
+      "avg_isolate_micro_recall_visible": 0.7666,
+      "avg_isolate_micro_precision_visible": 0.4909,
+      "avg_typology_jaccard": 1.0,
+      "avg_motif_jaccard": 1.0,
+      "avg_layer_path_match": 1.0
+    },
+    {
+      "condition": "compress",
+      "n": 5,
+      "avg_tokens_before": 1801.4,
+      "avg_tokens_after": 1541.0,
+      "avg_token_ratio": 1.169,
+      "lossless_exact_rate": 1.0,
+      "avg_gold_phrase_recall_visible": 1.0,
+      "avg_gold_phrase_recall_restored": 1.0,
+      "avg_isolate_micro_recall_visible": 0.7666,
+      "avg_isolate_micro_precision_visible": 0.4909,
+      "avg_typology_jaccard": 1.0,
+      "avg_motif_jaccard": 0.0,
+      "avg_layer_path_match": 1.0
+    },
+    {
+      "condition": "compact",
+      "n": 5,
+      "avg_tokens_before": 1801.4,
+      "avg_tokens_after": 1754.0,
+      "avg_token_ratio": 1.027,
+      "lossless_exact_rate": 0.0,
+      "avg_gold_phrase_recall_visible": 1.0,
+      "avg_gold_phrase_recall_restored": 1.0,
+      "avg_isolate_micro_recall_visible": 0.7666,
+      "avg_isolate_micro_precision_visible": 0.4909,
+      "avg_typology_jaccard": 1.0,
+      "avg_motif_jaccard": 0.1192,
+      "avg_layer_path_match": 1.0
+    },
+    {
+      "condition": "lossy_truncate",
+      "n": 5,
+      "avg_tokens_before": 1801.4,
+      "avg_tokens_after": 1585.6,
+      "avg_token_ratio": 1.1361,
+      "lossless_exact_rate": 0.0,
+      "avg_gold_phrase_recall_visible": 1.0,
+      "avg_gold_phrase_recall_restored": 1.0,
+      "avg_isolate_micro_recall_visible": 0.7666,
+      "avg_isolate_micro_precision_visible": 0.4909,
+      "avg_typology_jaccard": 1.0,
+      "avg_motif_jaccard": 0.4873,
+      "avg_layer_path_match": 1.0
+    },
+    {
+      "condition": "protect_compact",
+      "n": 5,
+      "avg_tokens_before": 1801.4,
+      "avg_tokens_after": 1549.4,
+      "avg_token_ratio": 1.1626,
+      "lossless_exact_rate": 1.0,
+      "avg_gold_phrase_recall_visible": 1.0,
+      "avg_gold_phrase_recall_restored": 1.0,
+      "avg_isolate_micro_recall_visible": 0.7666,
+      "avg_isolate_micro_precision_visible": 0.4909,
+      "avg_typology_jaccard": 1.0,
+      "avg_motif_jaccard": 0.0127,
+      "avg_layer_path_match": 1.0
+    }
+  ],
+  "rows": [
+    {
+      "fixture_id": "deploy_budget",
+      "condition": "raw",
+      "tokens_before": 1816,
+      "tokens_after": 1816,
+      "token_ratio": 1.0,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4545,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "n_messages": 8,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 85,
+          "n_isolates_cond": 85,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 85,
+          "n_isolates_cond": 85,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.4545,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1768
+      }
+    },
+    {
+      "fixture_id": "deploy_budget",
+      "condition": "compress",
+      "tokens_before": 1816,
+      "tokens_after": 1555,
+      "token_ratio": 1.1678,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4545,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "dict_size": 71,
+        "compression_factor": 1.1678456591639872,
+        "packed_tokens": 1555,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 85,
+          "n_isolates_cond": 162,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 183
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 85,
+          "n_isolates_cond": 85,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.4545,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1768
+      }
+    },
+    {
+      "fixture_id": "deploy_budget",
+      "condition": "compact",
+      "tokens_before": 1816,
+      "tokens_after": 1768,
+      "token_ratio": 1.0271,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4545,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.1076,
+      "layer_path_match": 1.0,
+      "meta": {
+        "mode": "lossless_dict",
+        "n_cold_refs": 1,
+        "cold_kinds": [
+          "dict_encoded"
+        ],
+        "fits_budget": true,
+        "compression_factor": 1.0271,
+        "budget": 1800,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.1076,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 85,
+          "n_isolates_cond": 121,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 142
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 85,
+          "n_isolates_cond": 77,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 97
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.4545,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1768
+      }
+    },
+    {
+      "fixture_id": "deploy_budget",
+      "condition": "lossy_truncate",
+      "tokens_before": 1816,
+      "tokens_after": 1598,
+      "token_ratio": 1.1364,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4545,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.4964,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1768,
+        "truncated": true,
+        "target_chars": 7072,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.4964,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 85,
+          "n_isolates_cond": 79,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 100
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.4964,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 85,
+          "n_isolates_cond": 79,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 100
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.4545,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1768
+      }
+    },
+    {
+      "fixture_id": "deploy_budget",
+      "condition": "protect_compact",
+      "tokens_before": 1816,
+      "tokens_after": 1564,
+      "token_ratio": 1.1611,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4545,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.0105,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1768,
+        "n_keep_sentences": 11,
+        "n_rest_sentences": 7,
+        "note": "experiment-local: keyword-protect + dict-compress filler",
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0105,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 85,
+          "n_isolates_cond": 163,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 184
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0345,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 85,
+          "n_isolates_cond": 85,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.4545,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1768
+      }
+    },
+    {
+      "fixture_id": "privacy_export",
+      "condition": "raw",
+      "tokens_before": 1798,
+      "tokens_after": 1798,
+      "token_ratio": 1.0,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "n_messages": 8,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1750
+      }
+    },
+    {
+      "fixture_id": "privacy_export",
+      "condition": "compress",
+      "tokens_before": 1798,
+      "tokens_after": 1537,
+      "token_ratio": 1.1698,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "dict_size": 71,
+        "compression_factor": 1.169811320754717,
+        "packed_tokens": 1537,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 161,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 182
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1750
+      }
+    },
+    {
+      "fixture_id": "privacy_export",
+      "condition": "compact",
+      "tokens_before": 1798,
+      "tokens_after": 1750,
+      "token_ratio": 1.0274,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.1233,
+      "layer_path_match": 1.0,
+      "meta": {
+        "mode": "lossless_dict",
+        "n_cold_refs": 1,
+        "cold_kinds": [
+          "dict_encoded"
+        ],
+        "fits_budget": true,
+        "compression_factor": 1.0274,
+        "budget": 1800,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.1233,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 120,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 141
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 76,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 97
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1750
+      }
+    },
+    {
+      "fixture_id": "privacy_export",
+      "condition": "lossy_truncate",
+      "tokens_before": 1798,
+      "tokens_after": 1582,
+      "token_ratio": 1.1365,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.5338,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1750,
+        "truncated": true,
+        "target_chars": 7000,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.5338,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 78,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 99
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.5338,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 78,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 99
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1750
+      }
+    },
+    {
+      "fixture_id": "privacy_export",
+      "condition": "protect_compact",
+      "tokens_before": 1798,
+      "tokens_after": 1546,
+      "token_ratio": 1.163,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.0105,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1750,
+        "n_keep_sentences": 9,
+        "n_rest_sentences": 8,
+        "note": "experiment-local: keyword-protect + dict-compress filler",
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0105,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 162,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 183
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0294,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1750
+      }
+    },
+    {
+      "fixture_id": "incident_mitigate",
+      "condition": "raw",
+      "tokens_before": 1797,
+      "tokens_after": 1797,
+      "token_ratio": 1.0,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "n_messages": 8,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1750
+      }
+    },
+    {
+      "fixture_id": "incident_mitigate",
+      "condition": "compress",
+      "tokens_before": 1797,
+      "tokens_after": 1537,
+      "token_ratio": 1.1692,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "dict_size": 71,
+        "compression_factor": 1.1691607026675341,
+        "packed_tokens": 1537,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 161,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 182
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1750
+      }
+    },
+    {
+      "fixture_id": "incident_mitigate",
+      "condition": "compact",
+      "tokens_before": 1797,
+      "tokens_after": 1750,
+      "token_ratio": 1.0269,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.1233,
+      "layer_path_match": 1.0,
+      "meta": {
+        "mode": "lossless_dict",
+        "n_cold_refs": 1,
+        "cold_kinds": [
+          "dict_encoded"
+        ],
+        "fits_budget": true,
+        "compression_factor": 1.0269,
+        "budget": 1800,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.1233,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 120,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 141
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 76,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 97
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1750
+      }
+    },
+    {
+      "fixture_id": "incident_mitigate",
+      "condition": "lossy_truncate",
+      "tokens_before": 1797,
+      "tokens_after": 1582,
+      "token_ratio": 1.1359,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.3226,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1750,
+        "truncated": true,
+        "target_chars": 7000,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.3226,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 79,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 100
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.3226,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 79,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 100
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1750
+      }
+    },
+    {
+      "fixture_id": "incident_mitigate",
+      "condition": "protect_compact",
+      "tokens_before": 1797,
+      "tokens_after": 1545,
+      "token_ratio": 1.1631,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.0105,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1750,
+        "n_keep_sentences": 9,
+        "n_rest_sentences": 8,
+        "note": "experiment-local: keyword-protect + dict-compress filler",
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0105,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 162,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 183
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0294,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1750
+      }
+    },
+    {
+      "fixture_id": "research_summary",
+      "condition": "raw",
+      "tokens_before": 1801,
+      "tokens_after": 1801,
+      "token_ratio": 1.0,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.5,
+      "isolate_micro_precision_visible": 0.3333,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "n_messages": 8,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 104,
+          "n_motifs_cond": 104
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 104,
+          "n_motifs_cond": 104
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.3333,
+          "micro_recall": 0.5,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 2,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2
+            }
+          }
+        },
+        "matched_compact_tokens": 1754
+      }
+    },
+    {
+      "fixture_id": "research_summary",
+      "condition": "compress",
+      "tokens_before": 1801,
+      "tokens_after": 1541,
+      "token_ratio": 1.1687,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.5,
+      "isolate_micro_precision_visible": 0.3333,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "dict_size": 71,
+        "compression_factor": 1.1687216093445814,
+        "packed_tokens": 1541,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 161,
+          "n_motifs_raw": 104,
+          "n_motifs_cond": 182
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 104,
+          "n_motifs_cond": 104
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.3333,
+          "micro_recall": 0.5,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 2,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2
+            }
+          }
+        },
+        "matched_compact_tokens": 1754
+      }
+    },
+    {
+      "fixture_id": "research_summary",
+      "condition": "compact",
+      "tokens_before": 1801,
+      "tokens_after": 1754,
+      "token_ratio": 1.0268,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.5,
+      "isolate_micro_precision_visible": 0.3333,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.1136,
+      "layer_path_match": 1.0,
+      "meta": {
+        "mode": "lossless_dict",
+        "n_cold_refs": 1,
+        "cold_kinds": [
+          "dict_encoded"
+        ],
+        "fits_budget": true,
+        "compression_factor": 1.0268,
+        "budget": 1800,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.1136,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 120,
+          "n_motifs_raw": 104,
+          "n_motifs_cond": 141
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 76,
+          "n_motifs_raw": 104,
+          "n_motifs_cond": 96
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.3333,
+          "micro_recall": 0.5,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 2,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2
+            }
+          }
+        },
+        "matched_compact_tokens": 1754
+      }
+    },
+    {
+      "fixture_id": "research_summary",
+      "condition": "lossy_truncate",
+      "tokens_before": 1801,
+      "tokens_after": 1586,
+      "token_ratio": 1.1356,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.5,
+      "isolate_micro_precision_visible": 0.3333,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.5263,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1754,
+        "truncated": true,
+        "target_chars": 7016,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.5263,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 78,
+          "n_motifs_raw": 104,
+          "n_motifs_cond": 99
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.5263,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 78,
+          "n_motifs_raw": 104,
+          "n_motifs_cond": 99
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.3333,
+          "micro_recall": 0.5,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 2,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2
+            }
+          }
+        },
+        "matched_compact_tokens": 1754
+      }
+    },
+    {
+      "fixture_id": "research_summary",
+      "condition": "protect_compact",
+      "tokens_before": 1801,
+      "tokens_after": 1549,
+      "token_ratio": 1.1627,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.5,
+      "isolate_micro_precision_visible": 0.3333,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.0177,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1754,
+        "n_keep_sentences": 9,
+        "n_rest_sentences": 8,
+        "note": "experiment-local: keyword-protect + dict-compress filler",
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0177,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 162,
+          "n_motifs_raw": 104,
+          "n_motifs_cond": 183
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.04,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 104,
+          "n_motifs_cond": 104
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.3333,
+          "micro_recall": 0.5,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 2,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2
+            }
+          }
+        },
+        "matched_compact_tokens": 1754
+      }
+    },
+    {
+      "fixture_id": "sql_migration",
+      "condition": "raw",
+      "tokens_before": 1795,
+      "tokens_after": 1795,
+      "token_ratio": 1.0,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "n_messages": 8,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1748
+      }
+    },
+    {
+      "fixture_id": "sql_migration",
+      "condition": "compress",
+      "tokens_before": 1795,
+      "tokens_after": 1535,
+      "token_ratio": 1.1694,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "dict_size": 71,
+        "compression_factor": 1.1693811074918568,
+        "packed_tokens": 1535,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 161,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 182
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1748
+      }
+    },
+    {
+      "fixture_id": "sql_migration",
+      "condition": "compact",
+      "tokens_before": 1795,
+      "tokens_after": 1748,
+      "token_ratio": 1.0269,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.1284,
+      "layer_path_match": 1.0,
+      "meta": {
+        "mode": "lossless_dict",
+        "n_cold_refs": 1,
+        "cold_kinds": [
+          "dict_encoded"
+        ],
+        "fits_budget": true,
+        "compression_factor": 1.0269,
+        "budget": 1800,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.1284,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 120,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 141
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 76,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 97
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1748
+      }
+    },
+    {
+      "fixture_id": "sql_migration",
+      "condition": "lossy_truncate",
+      "tokens_before": 1795,
+      "tokens_after": 1580,
+      "token_ratio": 1.1361,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.5573,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1748,
+        "truncated": true,
+        "target_chars": 6992,
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.5573,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 78,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 99
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.5573,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 78,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 99
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1748
+      }
+    },
+    {
+      "fixture_id": "sql_migration",
+      "condition": "protect_compact",
+      "tokens_before": 1795,
+      "tokens_after": 1543,
+      "token_ratio": 1.1633,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 0.0141,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1748,
+        "n_keep_sentences": 9,
+        "n_rest_sentences": 8,
+        "note": "experiment-local: keyword-protect + dict-compress filler",
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0141,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 162,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 183
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0294,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 84,
+          "n_isolates_cond": 84,
+          "n_motifs_raw": 105,
+          "n_motifs_cond": 105
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "isolate_pr_visible": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1748
+      }
+    }
+  ],
+  "verdict": [
+    "Compact vs truncate gold-phrase recall was similar; inspect motif/layer metrics.",
+    "Lossless dict compress achieved exact round-trip (H2 supported for restore).",
+    "Compress beats compact for archival fidelity: full restore + token savings when patterns mine well.",
+    "Isolate-aware protect_compact matched or beat library compact on visible gold-phrase recall \u2014 prefer isolate-then-compact for reasoning traces."
+  ],
+  "hypotheses": {
+    "H1_distractors": "Compaction reduces tokens while keeping goal/constraint/outcome.",
+    "H2_lossless_motifs": "Dict compress exact restore preserves structure.",
+    "H3_lossy_hurts": "Truncate/stub without protection drops constraints."
+  }
+}

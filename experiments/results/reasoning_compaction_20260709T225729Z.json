@@ -1,0 +1,4478 @@
+{
+  "created_at": "2026-07-09T22:57:29.371299+00:00",
+  "budget": 1200,
+  "isolates_backend": "intentisolates",
+  "promptdict_src": "C:\\Users\\ehall\\OneDrive\\Desktop\\research\\PromptDictCompress\\src",
+  "n_fixtures": 5,
+  "conditions": [
+    "raw",
+    "compress",
+    "compact",
+    "lossy_truncate",
+    "protect_compact"
+  ],
+  "summary_table": [
+    {
+      "condition": "raw",
+      "n": 5,
+      "avg_tokens_before": 2846.4,
+      "avg_tokens_after": 2846.4,
+      "avg_token_ratio": 1.0,
+      "lossless_exact_rate": 1.0,
+      "avg_gold_phrase_recall_visible": 1.0,
+      "avg_gold_phrase_recall_restored": 1.0,
+      "avg_mid_constraint_recall_visible": 1.0,
+      "avg_isolate_micro_recall_visible": 0.7666,
+      "avg_isolate_micro_precision_visible": 0.3714,
+      "avg_typology_jaccard": 1.0,
+      "avg_motif_jaccard": 1.0,
+      "avg_layer_path_match": 1.0
+    },
+    {
+      "condition": "compress",
+      "n": 5,
+      "avg_tokens_before": 2846.4,
+      "avg_tokens_after": 1947.4,
+      "avg_token_ratio": 1.4616,
+      "lossless_exact_rate": 1.0,
+      "avg_gold_phrase_recall_visible": 1.0,
+      "avg_gold_phrase_recall_restored": 1.0,
+      "avg_mid_constraint_recall_visible": 1.0,
+      "avg_isolate_micro_recall_visible": 0.7666,
+      "avg_isolate_micro_precision_visible": 0.3714,
+      "avg_typology_jaccard": 1.0,
+      "avg_motif_jaccard": 1.0,
+      "avg_layer_path_match": 1.0
+    },
+    {
+      "condition": "compact",
+      "n": 5,
+      "avg_tokens_before": 2846.4,
+      "avg_tokens_after": 1428.0,
+      "avg_token_ratio": 1.9933,
+      "lossless_exact_rate": 0.0,
+      "avg_gold_phrase_recall_visible": 0.8666,
+      "avg_gold_phrase_recall_restored": 1.0,
+      "avg_mid_constraint_recall_visible": 0.7334,
+      "avg_isolate_micro_recall_visible": 0.6,
+      "avg_isolate_micro_precision_visible": 0.43,
+      "avg_typology_jaccard": 0.309,
+      "avg_motif_jaccard": 0.0381,
+      "avg_layer_path_match": 0.9333
+    },
+    {
+      "condition": "lossy_truncate",
+      "n": 5,
+      "avg_tokens_before": 2846.4,
+      "avg_tokens_after": 124.6,
+      "avg_token_ratio": 22.8729,
+      "lossless_exact_rate": 0.0,
+      "avg_gold_phrase_recall_visible": 0.6,
+      "avg_gold_phrase_recall_restored": 0.6,
+      "avg_mid_constraint_recall_visible": 0.2,
+      "avg_isolate_micro_recall_visible": 0.3,
+      "avg_isolate_micro_precision_visible": 0.25,
+      "avg_typology_jaccard": 0.6983,
+      "avg_motif_jaccard": 0.0659,
+      "avg_layer_path_match": 1.0
+    },
+    {
+      "condition": "protect_compact",
+      "n": 5,
+      "avg_tokens_before": 2846.4,
+      "avg_tokens_after": 185.6,
+      "avg_token_ratio": 15.3619,
+      "lossless_exact_rate": 0.0,
+      "avg_gold_phrase_recall_visible": 1.0,
+      "avg_gold_phrase_recall_restored": 1.0,
+      "avg_mid_constraint_recall_visible": 1.0,
+      "avg_isolate_micro_recall_visible": 0.7666,
+      "avg_isolate_micro_precision_visible": 0.4909,
+      "avg_typology_jaccard": 0.8145,
+      "avg_motif_jaccard": 0.0066,
+      "avg_layer_path_match": 1.0
+    }
+  ],
+  "rows": [
+    {
+      "fixture_id": "deploy_budget",
+      "condition": "raw",
+      "tokens_before": 2860,
+      "tokens_after": 2860,
+      "token_ratio": 1.0,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.3571,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "n_messages": 9,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 124,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 124,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 124,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.3571,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.375,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 5,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1436,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "deploy_budget",
+      "condition": "compress",
+      "tokens_before": 2860,
+      "tokens_after": 1961,
+      "token_ratio": 1.4584,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.3571,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "dict_size": 75,
+        "compression_factor": 1.4584395716471188,
+        "packed_tokens": 1961,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 124,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 205,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 226
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 124,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.3571,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.375,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 5,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1436,
+        "structure_text_source": "restored"
+      }
+    },
+    {
+      "fixture_id": "deploy_budget",
+      "condition": "compact",
+      "tokens_before": 2860,
+      "tokens_after": 1436,
+      "token_ratio": 1.9916,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 0.8333,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 0.6667,
+      "isolate_micro_recall_visible": 0.6667,
+      "isolate_micro_precision_visible": 0.4,
+      "mean_typology_jaccard": 0.3556,
+      "motif_jaccard": 0.0352,
+      "layer_path_match": 1.0,
+      "meta": {
+        "mode": "lossless_dict",
+        "n_cold_refs": 6,
+        "cold_kinds": [
+          "dict_encoded",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub"
+        ],
+        "fits_budget": false,
+        "compression_factor": 1.9916,
+        "budget": 1200,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.4,
+            "constraint": 0.1667,
+            "outcome": 0.5
+          },
+          "mean_typology_jaccard": 0.3556,
+          "motif_jaccard": 0.0352,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 71,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 91
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.4,
+            "constraint": 0.1667,
+            "outcome": 0.5
+          },
+          "mean_typology_jaccard": 0.3556,
+          "motif_jaccard": 0.0352,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 71,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 91
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 139,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 160
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 2,
+              "total": 3,
+              "recall": 0.6667
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.8333,
+          "hits": 5,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 0.6667,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.4,
+          "micro_recall": 0.6667,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.3333,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 4,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 0,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1436,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "deploy_budget",
+      "condition": "lossy_truncate",
+      "tokens_before": 2860,
+      "tokens_after": 132,
+      "token_ratio": 21.6667,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 0.5,
+      "gold_phrase_recall_restored": 0.5,
+      "mid_constraint_recall_visible": 0.0,
+      "isolate_micro_recall_visible": 0.3333,
+      "isolate_micro_precision_visible": 0.25,
+      "mean_typology_jaccard": 0.7083,
+      "motif_jaccard": 0.0655,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1436,
+        "truncated": true,
+        "policy": "keep_first2_last2_then_char_trim",
+        "n_messages_kept": 4,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.375,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.7083,
+          "motif_jaccard": 0.0655,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 15,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 35
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.375,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.7083,
+          "motif_jaccard": 0.0655,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 15,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 35
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.375,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.7083,
+          "motif_jaccard": 0.0655,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 15,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 35
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 0,
+              "total": 3,
+              "recall": 0.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.5,
+          "hits": 3,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 0,
+              "total": 3,
+              "recall": 0.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.5,
+          "hits": 3,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 0.0,
+        "mid_constraint_recall_restored": 0.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.25,
+          "micro_recall": 0.3333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 3,
+              "fn": 3
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1436,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "deploy_budget",
+      "condition": "protect_compact",
+      "tokens_before": 2860,
+      "tokens_after": 201,
+      "token_ratio": 14.2289,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4545,
+      "mean_typology_jaccard": 0.8333,
+      "motif_jaccard": 0.011,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1436,
+        "n_keep_sentences": 12,
+        "n_rest_sentences": 8,
+        "note": "experiment-local: keyword-protect + dict-compress filler",
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.75,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.8333,
+          "motif_jaccard": 0.011,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 20,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 40
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.75,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.8333,
+          "motif_jaccard": 0.011,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 20,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 40
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0213,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 124,
+          "n_isolates_cond": 124,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.4545,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1436,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "privacy_export",
+      "condition": "raw",
+      "tokens_before": 2842,
+      "tokens_after": 2842,
+      "token_ratio": 1.0,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4167,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "n_messages": 9,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.4167,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1426,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "privacy_export",
+      "condition": "compress",
+      "tokens_before": 2842,
+      "tokens_after": 1943,
+      "token_ratio": 1.4627,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4167,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "dict_size": 75,
+        "compression_factor": 1.462686567164179,
+        "packed_tokens": 1943,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 204,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 225
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.4167,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1426,
+        "structure_text_source": "restored"
+      }
+    },
+    {
+      "fixture_id": "privacy_export",
+      "condition": "compact",
+      "tokens_before": 2842,
+      "tokens_after": 1426,
+      "token_ratio": 1.993,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 0.8333,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 0.6667,
+      "isolate_micro_recall_visible": 0.6667,
+      "isolate_micro_precision_visible": 0.5,
+      "mean_typology_jaccard": 0.337,
+      "motif_jaccard": 0.0352,
+      "layer_path_match": 1.0,
+      "meta": {
+        "mode": "lossless_dict",
+        "n_cold_refs": 6,
+        "cold_kinds": [
+          "dict_encoded",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub"
+        ],
+        "fits_budget": false,
+        "compression_factor": 1.993,
+        "budget": 1200,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.4,
+            "constraint": 0.1111,
+            "outcome": 0.5
+          },
+          "mean_typology_jaccard": 0.337,
+          "motif_jaccard": 0.0352,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 70,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 91
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.4,
+            "constraint": 0.1111,
+            "outcome": 0.5
+          },
+          "mean_typology_jaccard": 0.337,
+          "motif_jaccard": 0.0352,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 70,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 91
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 138,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 159
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 2,
+              "total": 3,
+              "recall": 0.6667
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.8333,
+          "hits": 5,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 0.6667,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.5,
+          "micro_recall": 0.6667,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 2,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 0,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1426,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "privacy_export",
+      "condition": "lossy_truncate",
+      "tokens_before": 2842,
+      "tokens_after": 120,
+      "token_ratio": 23.6833,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 0.6667,
+      "gold_phrase_recall_restored": 0.6667,
+      "mid_constraint_recall_visible": 0.3333,
+      "isolate_micro_recall_visible": 0.3333,
+      "isolate_micro_precision_visible": 0.2857,
+      "mean_typology_jaccard": 0.6944,
+      "motif_jaccard": 0.0659,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1426,
+        "truncated": true,
+        "policy": "keep_first2_last2_then_char_trim",
+        "n_messages_kept": 4,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.3333,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.6944,
+          "motif_jaccard": 0.0659,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 34
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.3333,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.6944,
+          "motif_jaccard": 0.0659,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 34
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.3333,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.6944,
+          "motif_jaccard": 0.0659,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 34
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 1,
+              "total": 3,
+              "recall": 0.3333
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.6667,
+          "hits": 4,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 1,
+              "total": 3,
+              "recall": 0.3333
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.6667,
+          "hits": 4,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 0.3333,
+        "mid_constraint_recall_restored": 0.3333,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.2857,
+          "micro_recall": 0.3333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 2,
+              "fn": 3
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1426,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "privacy_export",
+      "condition": "protect_compact",
+      "tokens_before": 2842,
+      "tokens_after": 178,
+      "token_ratio": 15.9663,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 0.8056,
+      "motif_jaccard": 0.0055,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1426,
+        "n_keep_sentences": 10,
+        "n_rest_sentences": 9,
+        "note": "experiment-local: keyword-protect + dict-compress filler",
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.6667,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.8056,
+          "motif_jaccard": 0.0055,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 18,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 38
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.6667,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.8056,
+          "motif_jaccard": 0.0055,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 18,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 38
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0141,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1426,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "incident_mitigate",
+      "condition": "raw",
+      "tokens_before": 2841,
+      "tokens_after": 2841,
+      "token_ratio": 1.0,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4167,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "n_messages": 9,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.4167,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1426,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "incident_mitigate",
+      "condition": "compress",
+      "tokens_before": 2841,
+      "tokens_after": 1942,
+      "token_ratio": 1.4629,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4167,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "dict_size": 75,
+        "compression_factor": 1.4629248197734295,
+        "packed_tokens": 1942,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 204,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 225
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.4167,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1426,
+        "structure_text_source": "restored"
+      }
+    },
+    {
+      "fixture_id": "incident_mitigate",
+      "condition": "compact",
+      "tokens_before": 2841,
+      "tokens_after": 1426,
+      "token_ratio": 1.9923,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 0.8333,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 0.6667,
+      "isolate_micro_recall_visible": 0.6667,
+      "isolate_micro_precision_visible": 0.5,
+      "mean_typology_jaccard": 0.337,
+      "motif_jaccard": 0.0444,
+      "layer_path_match": 1.0,
+      "meta": {
+        "mode": "lossless_dict",
+        "n_cold_refs": 6,
+        "cold_kinds": [
+          "dict_encoded",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub"
+        ],
+        "fits_budget": false,
+        "compression_factor": 1.9923,
+        "budget": 1200,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.4,
+            "constraint": 0.1111,
+            "outcome": 0.5
+          },
+          "mean_typology_jaccard": 0.337,
+          "motif_jaccard": 0.0444,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 70,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 91
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.4,
+            "constraint": 0.1111,
+            "outcome": 0.5
+          },
+          "mean_typology_jaccard": 0.337,
+          "motif_jaccard": 0.0444,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 70,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 91
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 138,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 159
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 2,
+              "total": 3,
+              "recall": 0.6667
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.8333,
+          "hits": 5,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 0.6667,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.5,
+          "micro_recall": 0.6667,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 2,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 0,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1426,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "incident_mitigate",
+      "condition": "lossy_truncate",
+      "tokens_before": 2841,
+      "tokens_after": 127,
+      "token_ratio": 22.3701,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 0.6667,
+      "gold_phrase_recall_restored": 0.6667,
+      "mid_constraint_recall_visible": 0.3333,
+      "isolate_micro_recall_visible": 0.3333,
+      "isolate_micro_precision_visible": 0.2857,
+      "mean_typology_jaccard": 0.6944,
+      "motif_jaccard": 0.0659,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1426,
+        "truncated": true,
+        "policy": "keep_first2_last2_then_char_trim",
+        "n_messages_kept": 4,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.3333,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.6944,
+          "motif_jaccard": 0.0659,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 34
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.3333,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.6944,
+          "motif_jaccard": 0.0659,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 34
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.3333,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.6944,
+          "motif_jaccard": 0.0659,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 34
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 1,
+              "total": 3,
+              "recall": 0.3333
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.6667,
+          "hits": 4,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 1,
+              "total": 3,
+              "recall": 0.3333
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.6667,
+          "hits": 4,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 0.3333,
+        "mid_constraint_recall_restored": 0.3333,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.2857,
+          "micro_recall": 0.3333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 2,
+              "fn": 3
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1426,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "incident_mitigate",
+      "condition": "protect_compact",
+      "tokens_before": 2841,
+      "tokens_after": 182,
+      "token_ratio": 15.6099,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 0.8056,
+      "motif_jaccard": 0.0055,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1426,
+        "n_keep_sentences": 10,
+        "n_rest_sentences": 9,
+        "note": "experiment-local: keyword-protect + dict-compress filler",
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.6667,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.8056,
+          "motif_jaccard": 0.0055,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 18,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 38
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.6667,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.8056,
+          "motif_jaccard": 0.0055,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 18,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 38
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0141,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1426,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "research_summary",
+      "condition": "raw",
+      "tokens_before": 2848,
+      "tokens_after": 2848,
+      "token_ratio": 1.0,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.5,
+      "isolate_micro_precision_visible": 0.25,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "n_messages": 9,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 143
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 143
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 143
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.25,
+          "micro_recall": 0.5,
+          "per_type": {
+            "goal": {
+              "precision": 0.2,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 4,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.3333,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 4,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2
+            }
+          }
+        },
+        "matched_compact_tokens": 1428,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "research_summary",
+      "condition": "compress",
+      "tokens_before": 2848,
+      "tokens_after": 1949,
+      "token_ratio": 1.4613,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.5,
+      "isolate_micro_precision_visible": 0.25,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "dict_size": 75,
+        "compression_factor": 1.461262185736275,
+        "packed_tokens": 1949,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 143
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 204,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 225
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 143
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.25,
+          "micro_recall": 0.5,
+          "per_type": {
+            "goal": {
+              "precision": 0.2,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 4,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.3333,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 4,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2
+            }
+          }
+        },
+        "matched_compact_tokens": 1428,
+        "structure_text_source": "restored"
+      }
+    },
+    {
+      "fixture_id": "research_summary",
+      "condition": "compact",
+      "tokens_before": 2848,
+      "tokens_after": 1428,
+      "token_ratio": 1.9944,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 0.8333,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 0.6667,
+      "isolate_micro_recall_visible": 0.3333,
+      "isolate_micro_precision_visible": 0.25,
+      "mean_typology_jaccard": 0.1786,
+      "motif_jaccard": 0.0405,
+      "layer_path_match": 0.6667,
+      "meta": {
+        "mode": "lossless_dict",
+        "n_cold_refs": 6,
+        "cold_kinds": [
+          "dict_encoded",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub"
+        ],
+        "fits_budget": false,
+        "compression_factor": 1.9944,
+        "budget": 1200,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.2857,
+            "constraint": 0.25,
+            "outcome": 0.0
+          },
+          "mean_typology_jaccard": 0.1786,
+          "motif_jaccard": 0.0405,
+          "layer_path_match": 0.6667,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 70,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 88
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.2857,
+            "constraint": 0.25,
+            "outcome": 0.0
+          },
+          "mean_typology_jaccard": 0.1786,
+          "motif_jaccard": 0.0405,
+          "layer_path_match": 0.6667,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 70,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 88
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 138,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 159
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 2,
+              "total": 3,
+              "recall": 0.6667
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.8333,
+          "hits": 5,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 0.6667,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.25,
+          "micro_recall": 0.3333,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.25,
+              "recall": 0.3333,
+              "tp": 1,
+              "fp": 3,
+              "fn": 2
+            },
+            "outcome": {
+              "precision": 1.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 0,
+              "fn": 2
+            }
+          }
+        },
+        "matched_compact_tokens": 1428,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "research_summary",
+      "condition": "lossy_truncate",
+      "tokens_before": 2848,
+      "tokens_after": 120,
+      "token_ratio": 23.7333,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 0.5,
+      "gold_phrase_recall_restored": 0.5,
+      "mid_constraint_recall_visible": 0.0,
+      "isolate_micro_recall_visible": 0.1667,
+      "isolate_micro_precision_visible": 0.1429,
+      "mean_typology_jaccard": 0.7,
+      "motif_jaccard": 0.0663,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1428,
+        "truncated": true,
+        "policy": "keep_first2_last2_then_char_trim",
+        "n_messages_kept": 4,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.6,
+            "constraint": 0.5,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.7,
+          "motif_jaccard": 0.0663,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 34
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.6,
+            "constraint": 0.5,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.7,
+          "motif_jaccard": 0.0663,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 34
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.6,
+            "constraint": 0.5,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.7,
+          "motif_jaccard": 0.0663,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 34
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 0,
+              "total": 3,
+              "recall": 0.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.5,
+          "hits": 3,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 0,
+              "total": 3,
+              "recall": 0.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.5,
+          "hits": 3,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 0.0,
+        "mid_constraint_recall_restored": 0.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.1429,
+          "micro_recall": 0.1667,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 3,
+              "fn": 3
+            },
+            "outcome": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2
+            }
+          }
+        },
+        "matched_compact_tokens": 1428,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "research_summary",
+      "condition": "protect_compact",
+      "tokens_before": 2848,
+      "tokens_after": 185,
+      "token_ratio": 15.3946,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.5,
+      "isolate_micro_precision_visible": 0.3333,
+      "mean_typology_jaccard": 0.8222,
+      "motif_jaccard": 0.0056,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1428,
+        "n_keep_sentences": 10,
+        "n_rest_sentences": 9,
+        "note": "experiment-local: keyword-protect + dict-compress filler",
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.8,
+            "constraint": 0.6667,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.8222,
+          "motif_jaccard": 0.0056,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 18,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 38
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.8,
+            "constraint": 0.6667,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.8222,
+          "motif_jaccard": 0.0056,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 18,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 38
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0142,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 143,
+          "n_motifs_cond": 143
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.3333,
+          "micro_recall": 0.5,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 2,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 1,
+              "fn": 2
+            }
+          }
+        },
+        "matched_compact_tokens": 1428,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "sql_migration",
+      "condition": "raw",
+      "tokens_before": 2841,
+      "tokens_after": 2841,
+      "token_ratio": 1.0,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4167,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "n_messages": 9,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.4167,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1424,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "sql_migration",
+      "condition": "compress",
+      "tokens_before": 2841,
+      "tokens_after": 1942,
+      "token_ratio": 1.4629,
+      "lossless_exact": true,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.4167,
+      "mean_typology_jaccard": 1.0,
+      "motif_jaccard": 1.0,
+      "layer_path_match": 1.0,
+      "meta": {
+        "dict_size": 75,
+        "compression_factor": 1.4629248197734295,
+        "packed_tokens": 1942,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 204,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 225
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 1.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.4167,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.25,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 3,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 3,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1424,
+        "structure_text_source": "restored"
+      }
+    },
+    {
+      "fixture_id": "sql_migration",
+      "condition": "compact",
+      "tokens_before": 2841,
+      "tokens_after": 1424,
+      "token_ratio": 1.9951,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.6667,
+      "isolate_micro_precision_visible": 0.5,
+      "mean_typology_jaccard": 0.337,
+      "motif_jaccard": 0.0354,
+      "layer_path_match": 1.0,
+      "meta": {
+        "mode": "lossless_dict",
+        "n_cold_refs": 6,
+        "cold_kinds": [
+          "dict_encoded",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub",
+          "summary_stub"
+        ],
+        "fits_budget": false,
+        "compression_factor": 1.9951,
+        "budget": 1200,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.4,
+            "constraint": 0.1111,
+            "outcome": 0.5
+          },
+          "mean_typology_jaccard": 0.337,
+          "motif_jaccard": 0.0354,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 70,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 90
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.4,
+            "constraint": 0.1111,
+            "outcome": 0.5
+          },
+          "mean_typology_jaccard": 0.337,
+          "motif_jaccard": 0.0354,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 70,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 90
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "2",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 138,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 159
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.5,
+          "micro_recall": 0.6667,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.5,
+              "recall": 0.6667,
+              "tp": 2,
+              "fp": 2,
+              "fn": 1
+            },
+            "outcome": {
+              "precision": 1.0,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 0,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1424,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "sql_migration",
+      "condition": "lossy_truncate",
+      "tokens_before": 2841,
+      "tokens_after": 124,
+      "token_ratio": 22.9113,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 0.6667,
+      "gold_phrase_recall_restored": 0.6667,
+      "mid_constraint_recall_visible": 0.3333,
+      "isolate_micro_recall_visible": 0.3333,
+      "isolate_micro_precision_visible": 0.2857,
+      "mean_typology_jaccard": 0.6944,
+      "motif_jaccard": 0.0659,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1424,
+        "truncated": true,
+        "policy": "keep_first2_last2_then_char_trim",
+        "n_messages_kept": 4,
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.3333,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.6944,
+          "motif_jaccard": 0.0659,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 34
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.3333,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.6944,
+          "motif_jaccard": 0.0659,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 34
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.3333,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.6944,
+          "motif_jaccard": 0.0659,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 14,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 34
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 1,
+              "total": 3,
+              "recall": 0.3333
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.6667,
+          "hits": 4,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 1,
+              "total": 3,
+              "recall": 0.3333
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 0.6667,
+          "hits": 4,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 0.3333,
+        "mid_constraint_recall_restored": 0.3333,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.2857,
+          "micro_recall": 0.3333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "tp": 0,
+              "fp": 2,
+              "fn": 3
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1424,
+        "structure_text_source": "visible"
+      }
+    },
+    {
+      "fixture_id": "sql_migration",
+      "condition": "protect_compact",
+      "tokens_before": 2841,
+      "tokens_after": 182,
+      "token_ratio": 15.6099,
+      "lossless_exact": false,
+      "gold_phrase_recall_visible": 1.0,
+      "gold_phrase_recall_restored": 1.0,
+      "mid_constraint_recall_visible": 1.0,
+      "isolate_micro_recall_visible": 0.8333,
+      "isolate_micro_precision_visible": 0.5556,
+      "mean_typology_jaccard": 0.8056,
+      "motif_jaccard": 0.0055,
+      "layer_path_match": 1.0,
+      "meta": {
+        "budget": 1424,
+        "n_keep_sentences": 10,
+        "n_rest_sentences": 9,
+        "note": "experiment-local: keyword-protect + dict-compress filler",
+        "pipeline_structure": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.6667,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.8056,
+          "motif_jaccard": 0.0055,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 18,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 38
+        },
+        "pipeline_visible": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 0.75,
+            "constraint": 0.6667,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 0.8056,
+          "motif_jaccard": 0.0055,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 18,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 38
+        },
+        "pipeline_restored": {
+          "backend": "intentisolates",
+          "typology_jaccard": {
+            "goal": 1.0,
+            "constraint": 1.0,
+            "outcome": 1.0
+          },
+          "mean_typology_jaccard": 1.0,
+          "motif_jaccard": 0.0141,
+          "layer_path_match": 1.0,
+          "layer_path_raw": [
+            "0",
+            "3",
+            "4"
+          ],
+          "layer_path_cond": [
+            "0",
+            "3",
+            "4"
+          ],
+          "n_isolates_raw": 123,
+          "n_isolates_cond": 123,
+          "n_motifs_raw": 144,
+          "n_motifs_cond": 144
+        },
+        "phrase_visible": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "phrase_restored": {
+          "per_type": {
+            "goal": {
+              "hit": 1,
+              "total": 1,
+              "recall": 1.0
+            },
+            "constraint": {
+              "hit": 3,
+              "total": 3,
+              "recall": 1.0
+            },
+            "outcome": {
+              "hit": 2,
+              "total": 2,
+              "recall": 1.0
+            }
+          },
+          "micro_recall": 1.0,
+          "hits": 6,
+          "total": 6
+        },
+        "mid_constraint_recall_visible": 1.0,
+        "mid_constraint_recall_restored": 1.0,
+        "isolate_pr_structure": {
+          "mode": "isolates",
+          "micro_precision": 0.5556,
+          "micro_recall": 0.8333,
+          "per_type": {
+            "goal": {
+              "precision": 0.3333,
+              "recall": 1.0,
+              "tp": 1,
+              "fp": 2,
+              "fn": 0
+            },
+            "constraint": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "tp": 3,
+              "fp": 1,
+              "fn": 0
+            },
+            "outcome": {
+              "precision": 0.5,
+              "recall": 0.5,
+              "tp": 1,
+              "fp": 1,
+              "fn": 1
+            }
+          }
+        },
+        "matched_compact_tokens": 1424,
+        "structure_text_source": "visible"
+      }
+    }
+  ],
+  "verdict": [
+    "Compaction preserved mid-trace constraints better than naive truncate at matched budgets (H1/H3 supported).",
+    "Lossless dict compress achieved exact round-trip (H2 supported for restore).",
+    "After decompress, motif Jaccard vs raw is high \u2014 lossless path preserves reasoning-structure metrics (H2).",
+    "Compress beats compact for archival fidelity: full restore + token savings when patterns mine well.",
+    "Isolate-aware protect_compact matched or beat library compact on mid-constraint recall \u2014 prefer isolate-then-compact for reasoning traces."
+  ],
+  "hypotheses": {
+    "H1_distractors": "Compaction reduces tokens while keeping goal/constraint/outcome.",
+    "H2_lossless_motifs": "Dict compress exact restore preserves structure.",
+    "H3_lossy_hurts": "Truncate/stub without protection drops constraints."
+  }
+}
