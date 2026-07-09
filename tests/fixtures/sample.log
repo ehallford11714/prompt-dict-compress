@@ -1,0 +1,16 @@
+2026-07-09T10:00:01Z INFO svc=api request_id=1 path=/v1/users method=GET status=200 latency_ms=12 msg=ok
+2026-07-09T10:00:02Z INFO svc=api request_id=2 path=/v1/users method=GET status=200 latency_ms=15 msg=ok
+2026-07-09T10:00:03Z INFO svc=api request_id=3 path=/v1/users method=GET status=200 latency_ms=11 msg=ok
+2026-07-09T10:00:04Z WARN svc=api request_id=4 path=/v1/orders method=POST status=429 latency_ms=3 msg=rate_limited
+2026-07-09T10:00:05Z WARN svc=api request_id=5 path=/v1/orders method=POST status=429 latency_ms=4 msg=rate_limited
+2026-07-09T10:00:06Z WARN svc=api request_id=6 path=/v1/orders method=POST status=429 latency_ms=2 msg=rate_limited
+2026-07-09T10:00:07Z ERROR svc=worker job=42 attempt=1 error=timeout retry=true queue=default
+2026-07-09T10:00:08Z ERROR svc=worker job=42 attempt=2 error=timeout retry=true queue=default
+2026-07-09T10:00:09Z ERROR svc=worker job=42 attempt=3 error=timeout retry=true queue=default
+2026-07-09T10:00:10Z INFO svc=api request_id=7 path=/v1/users method=GET status=200 latency_ms=14 msg=ok
+2026-07-09T10:00:11Z INFO svc=api request_id=8 path=/v1/users method=GET status=200 latency_ms=13 msg=ok
+2026-07-09T10:00:12Z INFO svc=api request_id=9 path=/v1/users method=GET status=200 latency_ms=16 msg=ok
+2026-07-09T10:00:13Z WARN svc=api request_id=10 path=/v1/orders method=POST status=429 latency_ms=5 msg=rate_limited
+2026-07-09T10:00:14Z WARN svc=api request_id=11 path=/v1/orders method=POST status=429 latency_ms=6 msg=rate_limited
+2026-07-09T10:00:15Z ERROR svc=worker job=99 attempt=1 error=timeout retry=true queue=default
+2026-07-09T10:00:16Z ERROR svc=worker job=99 attempt=2 error=timeout retry=true queue=default

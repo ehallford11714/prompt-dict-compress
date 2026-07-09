@@ -1,0 +1,12 @@
+{"event":"login","user":"alice","tenant":"acme","ok":true}
+{"event":"login","user":"bob","tenant":"acme","ok":true}
+{"event":"login","user":"carol","tenant":"acme","ok":true}
+{"event":"purchase","user":"alice","tenant":"acme","sku":"A1","qty":1}
+{"event":"purchase","user":"bob","tenant":"acme","sku":"A1","qty":2}
+{"event":"purchase","user":"carol","tenant":"acme","sku":"A1","qty":1}
+{"event":"logout","user":"alice","tenant":"acme","ok":true}
+{"event":"logout","user":"bob","tenant":"acme","ok":true}
+{"event":"logout","user":"carol","tenant":"acme","ok":true}
+{"event":"login","user":"dave","tenant":"acme","ok":true}
+{"event":"purchase","user":"dave","tenant":"acme","sku":"A1","qty":3}
+{"event":"logout","user":"dave","tenant":"acme","ok":true}

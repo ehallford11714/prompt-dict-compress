@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "promptdict"
+version = "0.2.0"
+description = "Lossless prompt compression via dictionary-encoding + hierarchical PageIndex-style scaling toward 100M→1M token budgets"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "ehallford11714" }]
+keywords = [
+  "prompt-compression",
+  "lossless",
+  "dictionary-encoding",
+  "in-context-learning",
+  "pageindex",
+  "llm",
+]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+tiktoken = ["tiktoken>=0.5.0"]
+dev = ["pytest>=7.0", "tiktoken>=0.5.0"]
+
+[project.urls]
+Homepage = "https://github.com/ehallford11714/prompt-dict-compress"
+Repository = "https://github.com/ehallford11714/prompt-dict-compress"
+
+[project.scripts]
+promptdict = "promptdict.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
