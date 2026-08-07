@@ -38,6 +38,7 @@ Repository = "https://github.com/ehallford11714/prompt-dict-compress"
 
 [project.scripts]
 promptdict = "promptdict.cli:main"
+promptdict-mcp = "promptdict.mcp.server:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]

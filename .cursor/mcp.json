@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "promptdict": {
+      "command": "python",
+      "args": ["-m", "promptdict.mcp"],
+      "env": { "PYTHONUTF8": "1" }
+    }
+  }
+}

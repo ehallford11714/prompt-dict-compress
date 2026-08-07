@@ -4,6 +4,17 @@ PromptDictCompress (`promptdict`) is a small LLM prompt-memory suite: lossless d
 
 Inspired by [Lossless Prompt Compression via Dictionary-Encoding and In-Context Learning](https://arxiv.org/abs/2604.13066) (arXiv:2604.13066), extended with hierarchical / streaming scale paths and a compress / compact / recall suite.
 
+## For agents (MCP)
+
+**Start here:** [AGENTS.md](AGENTS.md) · [docs/MCP.md](docs/MCP.md)
+
+```bash
+pip install -e .
+python -m promptdict.mcp
+```
+
+Cursor: [`.cursor/mcp.json`](.cursor/mcp.json)
+
 ## Install
 
 ```bash

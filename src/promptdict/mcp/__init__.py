@@ -1,0 +1,1 @@
+"""PromptDict MCP server."""
